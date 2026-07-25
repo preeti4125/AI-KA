@@ -25,7 +25,7 @@ function AIAssistant() {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:5000/ai/ask", {
+      const response = await fetch("https://ai-ka-backend.onrender.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -1,5 +1,4 @@
-const API_URL = "http://localhost:5000/notes";
-
+const API = "https://ai-ka-backend.onrender.com";
 async function handleResponse(response, defaultMessage) {
   const data = await response.json();
 

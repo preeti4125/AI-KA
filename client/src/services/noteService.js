@@ -20,7 +20,7 @@ export async function getAllNotes() {
 
 // ADD NOTE
 export async function addNote(note) {
-  const response = await fetch(`${API_URL}/add`, {
+  const response = await fetch(`${"https://ai-ka-backend.onrender.com"}/add`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -34,7 +34,7 @@ export async function addNote(note) {
 
 // GET ONE NOTE
 export async function getNoteById(id) {
-  const response = await fetch(`${API_URL}/${id}`);
+  const response = await fetch(`${"https://ai-ka-backend.onrender.com"}/${id}`);
 
   return handleResponse(response, "Failed to fetch note");
 }
@@ -42,7 +42,7 @@ export async function getNoteById(id) {
 
 // UPDATE NOTE
 export async function updateNote(id, note) {
-  const response = await fetch(`${API_URL}/update/${id}`, {
+  const response = await fetch(`${"https://ai-ka-backend.onrender.com"}/update/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -56,7 +56,7 @@ export async function updateNote(id, note) {
 
 // TOGGLE FAVORITE
 export async function toggleFavorite(id) {
-  const response = await fetch(`${API_URL}/favorite/${id}`, {
+  const response = await fetch(`${"https://ai-ka-backend.onrender.com"}/favorite/${id}`, {
     method: "PATCH",
   });
 
@@ -66,7 +66,7 @@ export async function toggleFavorite(id) {
 
 // TOGGLE PIN
 export async function togglePin(id) {
-  const response = await fetch(`${API_URL}/pin/${id}`, {
+  const response = await fetch(`${"https://ai-ka-backend.onrender.com"}/pin/${id}`, {
     method: "PATCH",
   });
 
@@ -76,7 +76,7 @@ export async function togglePin(id) {
 
 // TOGGLE ARCHIVE
 export async function toggleArchive(id) {
-  const response = await fetch(`${API_URL}/archive/${id}`, {
+  const response = await fetch(`${"https://ai-ka-backend.onrender.com"}/archive/${id}`, {
     method: "PATCH",
   });
 
@@ -86,7 +86,7 @@ export async function toggleArchive(id) {
 
 // DUPLICATE NOTE
 export async function duplicateNote(id) {
-  const response = await fetch(`${API_URL}/duplicate/${id}`, {
+  const response = await fetch(`${"https://ai-ka-backend.onrender.com"}/duplicate/${id}`, {
     method: "POST",
   });
 
@@ -96,7 +96,7 @@ export async function duplicateNote(id) {
 
 // INCREASE VIEW COUNT
 export async function increaseViewCount(id) {
-  const response = await fetch(`${API_URL}/view/${id}`, {
+  const response = await fetch(`${"https://ai-ka-backend.onrender.com"}/view/${id}`, {
     method: "PATCH",
   });
 
@@ -106,7 +106,7 @@ export async function increaseViewCount(id) {
 
 // BULK ARCHIVE
 export async function bulkArchiveNotes(ids) {
-  const response = await fetch(`${API_URL}/bulk/archive`, {
+  const response = await fetch(`${"https://ai-ka-backend.onrender.com"}/bulk/archive`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
@@ -122,7 +122,7 @@ export async function bulkArchiveNotes(ids) {
 
 // BULK DELETE
 export async function bulkDeleteNotes(ids) {
-  const response = await fetch(`${API_URL}/bulk/delete`, {
+  const response = await fetch(`${"https://ai-ka-backend.onrender.com"}/bulk/delete`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
@@ -138,7 +138,7 @@ export async function bulkDeleteNotes(ids) {
 
 // DELETE NOTE
 export async function deleteNote(id) {
-  const response = await fetch(`${API_URL}/delete/${id}`, {
+  const response = await fetch(`${"https://ai-ka-backend.onrender.com"}/delete/${id}`, {
     method: "DELETE",
   });
 

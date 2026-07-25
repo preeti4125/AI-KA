@@ -12,7 +12,7 @@ async function handleResponse(response, defaultMessage) {
 
 // GET ALL NOTES
 export async function getAllNotes() {
-  const response = await fetch(`${API_URL}/all`);
+  const response = await fetch(`${"https://ai-ka-backend.onrender.com"}/all`);
 
   return handleResponse(response, "Failed to fetch notes");
 }
